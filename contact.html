@@ -151,13 +151,123 @@
                     </div>
                 </div>
             </div>
+            <style>
+                .row {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 20px;
+                    justify-content: center;
+                    padding: 20px;
+                }
+
+                .box {
+                    background: #ffffff;
+                    border-radius: 12px;
+                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+                    padding: 25px;
+                    width: 280px;
+                    text-align: center;
+                    transition: transform 0.3s ease, box-shadow 0.3s ease;
+                }
+
+                .box:hover {
+                    transform: translateY(-5px);
+                    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+                }
+
+                .box h3 {
+                    color: #222;
+                    margin-bottom: 15px;
+                    font-size: 1.2rem;
+                }
+
+                .box p {
+                    color: #555;
+                    margin: 5px 0;
+                    font-size: 0.95rem;
+                }
+
+                .box .icon {
+                    font-size: 2rem;
+                    margin-bottom: 10px;
+                    color: #007bff;
+                }
+
+                .social-icons {
+                    display: flex;
+                    justify-content: center;
+                    gap: 15px;
+                    margin-top: 10px;
+                }
+
+                .social-icons a {
+                    text-decoration: none;
+                    color: #007bff;
+                    font-size: 1.3rem;
+                }
+
+                .feedback-btn {
+                    margin-top: 10px;
+                    padding: 8px 20px;
+                    background: #007bff;
+                    color: #fff;
+                    border: none;
+                    border-radius: 6px;
+                    cursor: pointer;
+                    font-size: 0.9rem;
+                }
+
+                .feedback-btn:hover {
+                    background: #0056b3;
+                }
+            </style>
+
             <div class="row">
-                <div class="box"></div>
-                <div class="box"></div>
-                <div class="box"></div>
-                <div class="box"></div>
-                <div class="box"></div>
-                <div class="box"></div>
+                <div class="box">
+                    <div class="icon">📍</div>
+                    <h3>Office Address</h3>
+                    <p>123 Business Street</p>
+                    <p>Sector 21, Delhi - 110001</p>
+                </div>
+
+                <div class="box">
+                    <div class="icon">📞</div>
+                    <h3>Phone Numbers</h3>
+                    <p>+91 98765 43210</p>
+                    <p>+91 91234 56789</p>
+                </div>
+
+                <div class="box">
+                    <div class="icon">✉️</div>
+                    <h3>Email Addresses</h3>
+                    <p>info@examplecompany.com</p>
+                    <p>support@examplecompany.com</p>
+                </div>
+
+                <div class="box">
+                    <div class="icon">🕒</div>
+                    <h3>Working Hours</h3>
+                    <p>Monday - Saturday</p>
+                    <p>9:30 AM - 6:00 PM</p>
+                </div>
+
+                <div class="box">
+                    <div class="icon">🌐</div>
+                    <h3>Social Media</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-linkedin"></i></a>
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="icon">💬</div>
+                    <h3>Feedback</h3>
+                    <p>We'd love to hear from you</p>
+                    <button class="feedback-btn">Give Feedback</button>
+                </div>
             </div>
         </div>
     </div>

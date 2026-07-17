@@ -9659,6 +9659,9 @@ header.main-header.header-metal .header-sticky.active {
 }
 
 @media only screen and (max-width: 767px) {
+	.footer-copyright-text-metal p {
+	font-size: 12px;
+}
 
 
 	.hero-content-metal .section-title h1 {

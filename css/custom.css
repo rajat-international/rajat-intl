@@ -588,7 +588,7 @@ header.main-header .header-sticky.active {
 	font-weight: 600;
 	line-height: 1.2em;
 	padding: 12px 10px !important;
-	color: var(--white-color);
+	color: var(--primary-color);
 	background: transparent;
 	border-radius: 0px;
 	text-transform: capitalize;
@@ -3263,10 +3263,10 @@ header.main-header .header-sticky.active {
 
 .page-header {
 	position: relative;
-	background: url('../images/page-header-bg.jpg') no-repeat;
+	background: url('../images/common-hero-bg.webp') no-repeat;
 	background-position: center center;
 	background-size: cover;
-	padding: 280px 0 165px;
+	padding: 200px 0 80px;
 	margin-top: 20px;
 	overflow: hidden;
 }
@@ -6832,7 +6832,7 @@ header.main-header .header-sticky.active {
 	}
 
 	.section-title h2 {
-		font-size: 26px;
+		font-size: 22px;
 	}
 
 	.hero-sub-heading .satisfy-client-image figure img {

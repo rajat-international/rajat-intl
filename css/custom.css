@@ -7714,11 +7714,12 @@ header.main-header.header-metal .header-sticky.active {
 
 .hero-info-contact-box-metal {
 	width: calc(33.33% - 15px);
+	color: var(--white-color);
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	gap: 30px;
-	background: var(--accent-color);
+	background: var(--primary-color);
 	border-radius: 10px;
 	padding: 2.083vw;
 }
@@ -12569,4 +12570,8 @@ header.main-header.header-stone .header-sticky.active {
         height:42px;
         font-size:18px;
     }
+}
+
+.text_primary{
+	color: var(--primary-color) !important;
 }

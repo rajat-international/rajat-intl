@@ -3266,7 +3266,7 @@ header.main-header .header-sticky.active {
 	background: url('../images/common-hero-bg.webp') no-repeat;
 	background-position: center center;
 	background-size: cover;
-	padding: 200px 0 80px;
+	padding:80px 0;
 	margin-top: 20px;
 	overflow: hidden;
 }
@@ -6405,7 +6405,7 @@ header.main-header .header-sticky.active {
 	}
 
 	.page-header {
-		padding: 170px 0 80px;
+		padding: 80px 0;
 		margin-top: 0;
 	}
 

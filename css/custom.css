@@ -12665,7 +12665,12 @@ header.main-header.header-stone .header-sticky.active {
 
   .step-row .step-card{ max-width:420px; }
 
-  /* alternate sides on desktop */
+  @media (min-width: 768px) and (max-width: 1199.98px) {
+    .timeline::before {
+        opacity: 0;
+    }
+}
+
   @media (min-width: 768px){
     .step-row.is-right{ flex-direction: row-reverse; }
     .step-row.is-right .step-card{ margin-left:auto; text-align:left; }

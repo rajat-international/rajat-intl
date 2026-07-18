@@ -12595,8 +12595,87 @@ header.main-header.header-stone .header-sticky.active {
 	align-items: center;
 	z-index: 9999;
 	transition: all .3s ease;
+	border:2px solid var(--white-color) !important;
 }
 
 #backToTop:hover {
 	transform: translateY(-4px);
 }
+
+/* services me timeline */
+ .eyebrow{
+    font-size:.8rem;
+    font-weight:700;
+    letter-spacing:.25em;
+    text-transform:uppercase;
+    color: var(--rust);
+  }
+
+  .hero-rule{
+    width:64px;
+    height:3px;
+    background: var(--rust);
+  }
+
+  /* ---- Timeline (signature element) ---- */
+  .timeline{ position:relative; }
+
+  .timeline::before{
+    content:"";
+    position:absolute;
+    top:0; bottom:0;
+    left:50%;
+    width:0;
+    border-left:2px dashed var(--primary-color);
+    transform:translateX(-50%);
+    opacity:.55;
+  }
+
+  .step-badge{
+    width:64px; height:64px;
+    background: var(--primary-color);
+    color: var(--cream-2);
+    border:3px solid var(--cream);
+    box-shadow:0 0 0 2px var(--indigo-2);
+    font-size:1.4rem;
+    flex:0 0 auto;
+  }
+
+  .step-tag{
+    top:-10px;
+    font-size:.65rem;
+    padding:.15rem .45rem;
+    background: var(--accent-color);
+    color:#fff;
+    border-radius:2px;
+    white-space:nowrap;
+  }
+
+  .step-card{
+    background: var(--cream-2);
+    border:1px solid rgba(42,39,35,.08);
+    border-radius:.5rem;
+    transition: transform .2s ease, box-shadow .2s ease;
+  }
+
+  .step-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 .75rem 1.5rem rgba(31,58,95,.12);
+  }
+
+  .step-row .step-card{ max-width:420px; }
+
+  /* alternate sides on desktop */
+  @media (min-width: 768px){
+    .step-row.is-right{ flex-direction: row-reverse; }
+    .step-row.is-right .step-card{ margin-left:auto; text-align:left; }
+    .step-row.is-left .step-card{ margin-right:auto; text-align:left; }
+  }
+
+  /* mobile: line moves to the left, everything stacks one column */
+  @media (max-width: 767.98px){
+    .timeline::before{ left:32px; }
+    .step-badge{ width:52px; height:52px; font-size:1.1rem; }
+    .step-row, .step-row.is-right{ flex-direction:row !important; }
+    .step-card{ max-width:100% !important; margin:0 !important; }
+  }

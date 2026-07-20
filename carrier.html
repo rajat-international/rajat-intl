@@ -130,12 +130,128 @@
         </div>
     </div>
     <!-- Page Header Section End -->
-  <div class="page-video-gallery">
+    <!-- Careers Section Start -->
+    <div class="page-video-gallery py-5">
         <div class="container">
-           <p>Work in process</p>
+
+            <!-- Section Heading -->
+            <div class="row justify-content-center text-center mb-5 wow fadeInUp">
+                <div class="col-lg-8">
+                    <h2>Build Your Career With Us</h2>
+                    <p>
+                        Join Rajat International's team of skilled craftsmen, designers and professionals.
+                        Share your details below and we'll get in touch with you.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Career Application Form -->
+            <div class="row justify-content-center wow fadeInUp">
+                <div class="col-lg-8">
+                    <div class="card border-0 shadow-sm p-4 p-md-5">
+                        <form id="careerForm" method="POST" action="https://formsubmit.co/sumitkhan.dhana@gmail.com" class="career-form">
+
+                            <!-- FormSubmit Config (hidden fields) -->
+                            <input type="hidden" name="_subject" value="New Career Application - Rajat International">
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_template" value="table">
+
+                            <div class="row g-4">
+
+                                <!-- Full Name -->
+                                <div class="col-md-6">
+                                    <label class="form-label">Full Name</label>
+                                    <input type="text" class="form-control" name="Name"
+                                        placeholder="Enter your full name" required>
+                                </div>
+
+                                <!-- Mobile Number -->
+                                <div class="col-md-6">
+                                    <label class="form-label">Mobile Number</label>
+                                    <input type="tel" class="form-control" name="Mobile"
+                                        placeholder="Enter your mobile number" pattern="[0-9]{10}" required>
+                                </div>
+
+                                <!-- Email -->
+                                <div class="col-md-6">
+                                    <label class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" name="Email" placeholder="Enter your email"
+                                        required>
+                                </div>
+
+                                <!-- Position Applying For -->
+                                <div class="col-md-6">
+                                    <label class="form-label">Position Applying For</label>
+                                    <input type="text" class="form-control" name="Position"
+                                        placeholder="e.g. Embroidery Specialist" required>
+                                </div>
+
+                                <!-- Experience -->
+                                <div class="col-md-6">
+                                    <label class="form-label">Experience</label>
+                                    <input type="text" class="form-control" name="Experience" placeholder="e.g. 3 Years"
+                                        required>
+                                </div>
+
+                                <!-- Location -->
+                                <div class="col-md-6">
+                                    <label class="form-label">Preferred Location</label>
+                                    <select class="form-select" name="Location" required>
+                                        <option value="" selected disabled>Select location</option>
+                                        <option value="Gurugram">Gurugram</option>
+                                        <option value="Jaipur">Jaipur</option>
+                                    </select>
+                                </div>
+
+                                <!-- Message -->
+                                <div class="col-12">
+                                    <label class="form-label">Message</label>
+                                    <textarea class="form-control" name="Message" rows="4"
+                                        placeholder="Tell us a bit about yourself"></textarea>
+                                </div>
+
+                                <!-- Submit -->
+                                <div class="col-12 text-center mt-2">
+                                    <button type="submit" class="btn btn-default">Submit Application</button>
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Note -->
+            <div class="row mt-4 wow fadeInUp">
+                <div class="col-12 text-center">
+                    <p class="mb-0">Or send your resume directly to
+                        <a href="mailto:Rajatintl02@gmail.com">Rajatintl02@gmail.com</a>
+                    </p>
+                </div>
+            </div>
+
         </div>
     </div>
-<!-- Footer Section Start -->
+    <!-- Careers Section End -->
+
+    <!-- Success Popup Modal Start -->
+    <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content text-center p-4">
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <i class="fa fa-check-circle" style="font-size:60px; color:#28a745;"></i>
+                    </div>
+                    <h4 class="mb-2">Application Submitted!</h4>
+                    <p class="text-muted mb-4">Thank you for applying. Our team will review your details and get back to
+                        you soon.</p>
+                    <button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Success Popup Modal End -->
+    <!-- Footer Section Start -->
     <footer class="main-footer-metal bg-section dark-section">
         <div class="container">
             <div class="row">
@@ -178,7 +294,7 @@
                         <div class="footer-links-metal">
                             <h3>Quick Links</h3>
                             <ul>
-                             <li><a href="index.html">Home</a></li>
+                                <li><a href="index.html">Home</a></li>
                                 <li><a href="about.html">About Us</a></li>
                                 <li><a href="expertise.html">Expertise </a></li>
                                 <li><a href="fabric.html">Fabric</a></li>
@@ -270,7 +386,7 @@
     <!-- Footer Section End -->
     <!-- backto top start here -->
     <a href="#" id="backToTop" class="btn btn-primary rounded-circle shadow">
-       <i class="fa fa-arrow-up" style="font-size:20px;"></i>
+        <i class="fa fa-arrow-up" style="font-size:20px;"></i>
     </a>
     <!-- backto top end here -->
 
@@ -305,6 +421,45 @@
     <script src="js/wow.min.js"></script>
     <!-- Main Custom js file -->
     <script src="js/function.js"></script>
+
+    <!-- Career Form Submit + Popup Script -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const careerForm = document.getElementById("careerForm");
+    const successModal = new bootstrap.Modal(document.getElementById("successModal"));
+
+    if (careerForm) {
+        careerForm.addEventListener("submit", function (e) {
+            e.preventDefault(); // stop normal redirect
+
+            const formData = new FormData(careerForm);
+
+            fetch(careerForm.action, {
+                method: "POST",
+                body: formData,
+                headers: {
+                    "Accept": "application/json"
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    // Reset all fields to blank
+                    careerForm.reset();
+
+                    // Show success popup
+                    successModal.show();
+                } else {
+                    alert("Something went wrong. Please try again.");
+                }
+            })
+            .catch(error => {
+                console.error("Form submission error:", error);
+                alert("Something went wrong. Please check your internet connection and try again.");
+            });
+        });
+    }
+});
+</script>
 </body>
 
 

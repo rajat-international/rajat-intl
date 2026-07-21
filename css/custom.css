@@ -9659,6 +9659,10 @@ header.main-header.header-metal .header-sticky.active {
 }
 
 @media only screen and (max-width: 767px) {
+	.hero-metal {
+    background-size: cover;
+    background-position: 85% center;
+}
 	.navbar-brand img {
 	width: 100%;
 	max-width: 150px !important;

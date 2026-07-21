@@ -347,7 +347,7 @@ a:focus {
 	right: 0;
 	bottom: 0;
 	z-index: 1000;
-	background: var(--accent-color);
+	background: var(--primary-color);
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -3040,7 +3040,7 @@ header.main-header .header-sticky.active {
 
 .footer-logo img {
 	width: 100%;
-	max-width: 70px;
+	max-width: 150px;
 	box-shadow: 0 0 10px white;
 }
 
@@ -9659,6 +9659,10 @@ header.main-header.header-metal .header-sticky.active {
 }
 
 @media only screen and (max-width: 767px) {
+	.navbar-brand img {
+	width: 100%;
+	max-width: 150px !important;
+}
 	.footer-copyright-text-metal p {
 		font-size: 12px;
 	}

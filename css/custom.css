@@ -563,7 +563,7 @@ header.main-header .header-sticky.active {
 
 .navbar-brand img {
 	width: 100%;
-	max-width: 60px !important;
+	max-width: 200px !important;
 }
 
 .main-menu .nav-menu-wrapper {

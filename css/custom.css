@@ -4596,26 +4596,8 @@ header.main-header .header-sticky.active {
 	overflow: hidden;
 }
 
-.project-image::before {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	bottom: 0;
-	background: var(--primary-color);
-	height: 100%;
-	width: 100%;
-	border-radius: 10px;
-	opacity: 10%;
-	transform: scale(0);
-	transition: all 0.4s ease-in-out;
-	z-index: 1;
-}
 
-.project-item:hover .project-image::before {
-	transform: scale(1);
-}
+
 
 .project-image figure {
 	display: block;
@@ -5237,47 +5219,7 @@ header.main-header .header-sticky.active {
 	transition: all 0.4s ease-in-out;
 }
 
-.video-gallery-image:hover a::before {
-	opacity: 50%;
-	visibility: visible;
-	transform: scale(1);
-}
 
-.video-gallery-image a::after {
-	content: '\f04b';
-	font-family: 'FontAwesome';
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	right: 0;
-	transform: translate(-50%, -50%);
-	font-size: 20px;
-	background: var(--accent-color);
-	color: var(--primary-color);
-	border-radius: 50%;
-	height: 60px;
-	width: 60px;
-	cursor: none;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	opacity: 0;
-	visibility: hidden;
-	transition: all 0.5s ease-in-out;
-	z-index: 1;
-}
-
-.video-gallery-image:hover a::after {
-	opacity: 1;
-	visibility: visible;
-}
-
-.video-gallery-image img {
-	width: 100%;
-	aspect-ratio: 1 / 0.81;
-	object-fit: cover;
-	border-radius: 10px;
-}
 
 /************************************/
 /***   	  31. FAQs Page css 	  ***/
@@ -12524,7 +12466,7 @@ header.main-header.header-stone .header-sticky.active {
 /* social media icons */
 .social-fixed {
 	position: fixed;
-	top: 50%;
+	top: 70%;
 	right: 20px;
 	transform: translateY(-50%);
 	display: flex;
